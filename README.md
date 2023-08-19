@@ -24,7 +24,7 @@ vim ~/.ssh/config
 Host bastion
      HostName <ip_adress>
      User appuser
-     IdentityFile ~/.ssh/id_rsa
+     IdentityFile ~/.ssh/appuser
 
 Host someinternalhost
      HostName <ip_adress> #optional for ya cloud
