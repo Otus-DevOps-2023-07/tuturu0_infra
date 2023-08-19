@@ -38,5 +38,5 @@ Host someinternalhost
 Не удалось воспользоваться nip.io из-за: too many certificates already issued for \"nip.io\", так что использовал sslip.io
 URL: https://158-160-49-203.sslip.io/
 
-bastion_IP = 158.160.49.203
-someinternalhost_IP = 10.128.0.27
+- bastion_IP = 158.160.49.203
+- someinternalhost_IP = 10.128.0.27
