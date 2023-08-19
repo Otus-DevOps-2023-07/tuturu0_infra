@@ -6,7 +6,7 @@ tuturu0 Infra repository
 - Использовался уже созданный аккаунт в яндекс облаке
 - Созданы ВМ bastion (с внешним адресом) и someinternalhost (только с частным адресом)
 - Созданы открытый/закрытый ключи для appuser и добавлены на ВМ
-- Исследованы способы подключения к внутреннему хосту (someinternalhost) через SSH и OpenVPN
+- Исследованы способы подключения к внутреннему хосту (someinternalhost) через SSH и Pritunl+OpenVPN
 - Настроен let's encrypt сертификат в домене 158-160-49-203.sslip.io для Pritunl
 
 ## Подключение к someinternalhost в одну команду
