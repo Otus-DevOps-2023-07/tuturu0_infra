@@ -35,7 +35,7 @@ Host someinternalhost
 ```
 
 ## дополнительное задание 2
-Не удалось воспользоваться nip.io из-за: too many certificates already issued for \"nip.io\", так что использовал sslip.io
+Не удалось воспользоваться nip.io из-за: too many certificates already issued for \"nip.io\", так что использовал sslip.io<br>
 URL: https://158-160-49-203.sslip.io/
 
 - bastion_IP = 158.160.49.203
