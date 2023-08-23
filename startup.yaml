@@ -17,10 +17,10 @@ write_files:
         sudo apt install -y mongodb && \
         sudo systemctl start mongodb && \
         sudo systemctl enable mongodb && \
-        cd $HOME && \
+        cd /home/yc-user && \
         sudo apt install -y git && \
         git clone -b monolith https://github.com/express42/reddit.git && \
-        cd reddit && \
+        cd /home/yc-user/reddit && \
         bundle install && \
         puma -d && \
         echo "ready"
