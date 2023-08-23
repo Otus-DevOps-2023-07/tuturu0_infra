@@ -53,7 +53,8 @@ someinternalhost_IP = 10.128.0.27
 
 ## Приложение
 
-testapp_IP = 62.84.119.90 <br/>
+testapp_IP = 62.84.119.90
+
 testapp_port = 9292
 
 ## Самостоятельная работа
