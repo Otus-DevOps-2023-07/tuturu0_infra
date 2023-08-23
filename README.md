@@ -58,7 +58,7 @@ testapp_port = 9292
 
 ## Самостоятельная работа
 
-Скрипты: install_ruby.sh, install_mongodb.sh, deploy.sh<br>
+Скрипты для упрощения деплоя приложения: install_ruby.sh, install_mongodb.sh, deploy.sh<br/>
 Объединены в startup.sh
 
 ## Дополнительнае задание
