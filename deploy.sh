@@ -1,8 +1,8 @@
 #!/bin/bash 
 
-cd $HOME && \
+cd /home/yc-user && \
 sudo apt install -y git && \
 git clone -b monolith https://github.com/express42/reddit.git && \
-cd reddit && \
+cd /home/yc-user/reddit && \
 bundle install && \
 puma -d
