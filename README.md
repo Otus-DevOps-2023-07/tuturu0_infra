@@ -58,13 +58,21 @@ testapp_port = 9292
 
 ## Самостоятельная работа
 
-Скрипты в репозитории
+Скрипты: install_ruby.sh, install_mongodb.sh, deploy.sh<br>
+Объединены в startup.sh
 
 ## Дополнительнае задание
 
-startup.yaml
+Создание инстанса сразу с приложением: используется cloud-config startup.yaml
 Запускается командой:
 
 ```Bash
-yc compute instance create    --name reddit-app-2    --hostname reddit-app-2    --memory=4    --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB    --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4    --metadata-from-file='user-data=startup.yaml'
+yc compute instance create \
+   --name reddit-app-2 \
+   --hostname reddit-app-2 \
+   --memory=4 \
+   --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+   --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
+   --metadata-from-file='user-data=startup.yaml'
+   --metadata serial-port-enable=1
 ```
