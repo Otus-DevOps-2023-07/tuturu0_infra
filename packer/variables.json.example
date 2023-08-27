@@ -1,5 +1,5 @@
 {
-    "yc_service_account_key_file": "key.json.example",
-    "yc_folder_id": "some_id",
-    "yc_ssh_username": "ubuntu"
+    "service_account_key_file": "key.json.example",
+    "folder_id": "some_id",
+    "ssh_username": "ubuntu"
 }
