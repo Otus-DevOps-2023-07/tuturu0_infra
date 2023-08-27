@@ -2,6 +2,38 @@
 tuturu0 Infra repository
 
 
+# ДЗ №5
+
+- Установка packer с зеркала yandex
+- Настрокйка конфигурационного файла packer
+- Вынесение переменных в отдельный файл и добавление новых параметров
+- Написание конфига и скрипта для создания baked-образа с демоном реддита
+- Написание скрипта для содания ВМ из полученного baked-образа
+
+## Основное задание
+
+Запуск сборки:
+```Bash
+packer init config.pkr.hcl
+packer build -var-file=variables.pkr.hcl ubuntu16.pkr.hcl
+```
+
+## Дополнительное 
+
+Запуск сборки и создание ВМ:
+```Bash
+packer build -var-file=variables.pkr.hcl immutable.pkr.hcl
+```
+Далее перейти в каталог config-scripts и выполнить:
+```Bash
+./create-reddit-vm.sh
+```
+
+
+## ------------------------------------
+
+
+
 # ДЗ №4
 
 - Создание ВМ средствами yc cli
