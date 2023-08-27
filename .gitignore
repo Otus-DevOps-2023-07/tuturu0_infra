@@ -1,1 +1,2 @@
-/root/tuturu0_infra/packer/variables.pkr.hcl
+variables.pkr.hcl
+variables.json
