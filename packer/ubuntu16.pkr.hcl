@@ -1,6 +1,6 @@
 #source "yandex" "ubuntu16" {
-#  service_account_key_file = "/root/key.json"
-#  folder_id = "b1g57va3f20lbki0ntum"
+#  service_account_key_file = ""
+#  folder_id = "some_id"
 #  source_image_family = "ubuntu-1604-lts"
 #  image_name = "reddit-base-${formatdate("MM-DD-YYYY", timestamp())}"
 #  image_family = "reddit-base"
