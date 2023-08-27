@@ -1,6 +1,6 @@
 variable "service_account_key_file" {
     type = string
-    default = "/some/path"
+    default = "key.json.example"
 }
 
 variable "folder_id" {
