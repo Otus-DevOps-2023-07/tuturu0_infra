@@ -1,0 +1,5 @@
+{
+    "service_account_key_file": "key.json.example",
+    "folder_id": "some_id",
+    "ssh_username": "ubuntu"
+}
