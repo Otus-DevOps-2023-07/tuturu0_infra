@@ -16,9 +16,9 @@ provider "yandex" {
 
 
 resource "yandex_compute_instance" "app" {
-  
+
   count = var.vm_count
-  
+
   name = "reddit-app${count.index + 1}"
 
   metadata = {
@@ -53,7 +53,7 @@ resource "yandex_compute_instance" "app" {
   }
 
   connection {
-    type  = "ssh"
+    type = "ssh"
     #host  = yandex_compute_instance.app[*].network_interface.0.nat_ip_address
     host  = self.network_interface.0.nat_ip_address
     user  = "ubuntu"

@@ -35,5 +35,5 @@ variable "service_account_key_file" {
 
 variable "vm_count" {
   description = "number of vms"
-  default = 2
+  default     = 2
 }
