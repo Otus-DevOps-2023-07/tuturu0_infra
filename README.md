@@ -2,6 +2,28 @@
 tuturu0 Infra repository
 
 
+# ДЗ №6
+
+- Установка terraform с зеркала yandex
+- Настрокйка конфигурационного файла terraform
+- Настройка файлов переменных
+- Написание конфига для баллансировщика
+- Создание таргет группы для балансировщика
+
+```Bash
+terraform init
+terraform plan -var-file==terraform.tfvars
+terraform apply -var-file==terraform.tfvars
+```
+Основное задание: main.tf</br>
+Дополнительное задание: lb.tf</br>
+
+## Секция terraform закоментирована для прохождения теста
+
+## ------------------------------------
+
+
+
 # ДЗ №5
 
 - Установка packer с зеркала yandex
