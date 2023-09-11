@@ -2,6 +2,48 @@
 tuturu0 Infra repository
 
 
+
+# ДЗ №7
+
+
+- Созданы ВМ для приложения и базы в packer
+- Созданы модули app и db
+- Созданы окружения stage и prod
+- Создан backend для вынесения state в бакет (дополнительное задание)
+- Приложение и база разнесены по разным инстансам (дополнительное задание)
+
+## Для вынесения state в бакет необходимо:
+- Создать бакет
+- Создать статический ключ доступа
+- Выполнить init
+```Bash
+terraform init -backend-config="access_key=идентификатор_ключа" -backend-config="secret_key=секретный_ключ"
+```
+
+## Для разнесения приложения и БД по разным ВМ нужно:
+Добавить в unit-файл puma адрес базы
+```Bash
+Environment='DATABASE_URL=${internal_ip_address_db}'
+```
+Переменная internal_ip_address_db определяется в provisioner модуля app
+```Bash
+provisioner "file" {
+    content     = templatefile("${path.module}/puma.service", { internal_ip_address_db = "${var.db_ip}" })
+    destination = "/tmp/puma.service"
+  }
+```
+Для открытия доступа к базе на ВМ с ней выполняется
+```Bash
+#!/bin/bash
+
+sudo sed -i -e 's/^bind_ip/#bind_ip/;' /etc/mongodb.conf
+sudo systemctl restart mongodb
+```
+
+## ------------------------------------
+
+
+
 # ДЗ №6
 
 - Установка terraform с зеркала yandex
