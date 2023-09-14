@@ -1,7 +1,10 @@
 #!/bin/bash
 
-app=$(yc compute instance get --name reddit-app-0 | grep -A1 one_to_one_nat | awk '/address/ {print $2}')
-db=$(yc compute instance get --name reddit-db-0 | grep -A1 one_to_one_nat | awk '/address/ {print $2}')
+#app=$(yc compute instance get --name reddit-app-0 | grep -A1 one_to_one_nat | awk '/address/ {print $2}')
+#db=$(yc compute instance get --name reddit-db-0 | grep -A1 one_to_one_nat | awk '/address/ {print $2}')
+
+app=
+db=
 
 if [ "$1" == "--list" ]; then
 
