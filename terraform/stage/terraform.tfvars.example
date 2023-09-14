@@ -6,4 +6,3 @@ public_key_path          = "~/.ssh/yc.pub"
 subnet_id                = "some_id"
 service_account_key_file = "key.json.example"
 private_key_path         = "~/.ssh/yc"
-

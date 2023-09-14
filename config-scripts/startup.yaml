@@ -1,6 +1,6 @@
 #cloud-config
 users:
-  - name: yc-user 
+  - name: yc-user
     groups: sudo
     shell: /bin/bash
     sudo: 'ALL=(ALL) NOPASSWD:ALL'
@@ -10,7 +10,7 @@ write_files:
   - path: /home/yc-user/startup.sh
     permissions: '0755'
     content: |
-        #!/bin/bash 
+        #!/bin/bash
         sudo apt update && \
         sudo apt install -y ruby-full ruby-bundler build-essential && \
         sudo apt update && \

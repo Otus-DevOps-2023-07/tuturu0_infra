@@ -178,5 +178,3 @@ URL: https://158-160-49-203.sslip.io/
 
 bastion_IP = 158.160.49.203
 someinternalhost_IP = 10.128.0.27
-
-

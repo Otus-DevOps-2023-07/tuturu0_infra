@@ -15,7 +15,7 @@ cat<<EOF
   },
   "db": {
     "hosts": ["$db"]
-  }, 
+  },
   "_meta": {
     "hostvars": {}
   }
