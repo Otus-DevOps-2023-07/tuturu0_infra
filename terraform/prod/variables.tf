@@ -52,5 +52,3 @@ variable "environment" {
   description = "Prod or Stage"
   default     = "Stage"
 }
-
-

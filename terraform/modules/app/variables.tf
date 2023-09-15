@@ -28,4 +28,3 @@ variable "db_ip" {
 variable "private_key_path" {
   description = "Path to the private key used for ssh access"
 }
-

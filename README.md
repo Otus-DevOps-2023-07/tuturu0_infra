@@ -3,6 +3,32 @@ tuturu0 Infra repository
 
 
 
+# ДЗ №8
+
+
+- Установлен ansible
+- Созданы инвентарники в форматах .ini; .yml; .json и скрипт для генерации автоматического
+- Создан простой playbook
+- Опробованы модули ansible
+
+## Для использования статического .json инвентаря:
+```Bash
+ansible all -i ./inventory.json -m ping
+ansible-playbook -i ./inventory.json clone.yml
+```
+
+
+## Для использования динамического .json инвентаря:
+```Bash
+ansible-playbook clone.yml # т.к. .sh указан в ansible.cfg
+ansible-playbook -i ./inventory.sh clone.yml # но можно и так
+```
+
+
+## ------------------------------------
+
+
+
 # ДЗ №7
 
 
@@ -39,6 +65,7 @@ provisioner "file" {
 sudo sed -i -e 's/^bind_ip/#bind_ip/;' /etc/mongodb.conf
 sudo systemctl restart mongodb
 ```
+
 
 ## ------------------------------------
 
@@ -178,5 +205,3 @@ URL: https://158-160-49-203.sslip.io/
 
 bastion_IP = 158.160.49.203
 someinternalhost_IP = 10.128.0.27
-
-

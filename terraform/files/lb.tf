@@ -38,5 +38,3 @@ resource "yandex_lb_target_group" "web" {
     }
   }
 }
-
-
