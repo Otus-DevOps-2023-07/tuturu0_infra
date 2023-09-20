@@ -5,3 +5,4 @@
 .terraform/
 variables.pkr.hcl
 variables.json
+*.retry
