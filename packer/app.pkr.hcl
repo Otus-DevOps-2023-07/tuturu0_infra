@@ -26,16 +26,21 @@ source "yandex" "ubuntu16" {
 build {
   sources = ["source.yandex.ubuntu16"]
 
-  provisioner "shell" {
-    name            = "ruby"
-    script          = "./scripts/install_ruby.sh"
-    execute_command = "sudo {{.Path}}"
-  }
 
- # provisioner "shell" {
- #   name            = "mongodb"
- #   script          = "./scripts/install_mongodb.sh"
- #   execute_command = "sudo {{.Path}}"
- # }
+  provisioner "shell" {
+        inline = [
+            "echo Waiting for apt-get to finish...",
+            "a=1; while [ -n \"$(pgrep apt-get)\" ]; do echo $a; sleep 1s; a=$(expr $a + 1); done",
+            "echo Done."
+        ]
+    }
+
+
+  provisioner "ansible" {
+
+    user = "ubuntu"
+    playbook_file = "../ansible/packer_app.yml"
+
+  }
 
 }

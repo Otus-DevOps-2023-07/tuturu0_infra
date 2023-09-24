@@ -2,6 +2,7 @@
 
 #app=$(yc compute instance get --name reddit-app-0 | grep -A1 one_to_one_nat | awk '/address/ {print $2}')
 #db=$(yc compute instance get --name reddit-db-0 | grep -A1 one_to_one_nat | awk '/address/ {print $2}')
+#app=$(yc compute instance list | grep RUNNING | awk -F '|' '{print $6}' | awk '{$1=$1};1')
 
 app=
 db=
