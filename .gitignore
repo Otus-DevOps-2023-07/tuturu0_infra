@@ -6,3 +6,5 @@
 variables.pkr.hcl
 variables.json
 *.retry
+jdauphant.nginx
+vault.key
