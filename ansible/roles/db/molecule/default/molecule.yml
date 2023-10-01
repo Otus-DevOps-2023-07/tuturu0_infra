@@ -3,12 +3,11 @@ dependency:
   name: galaxy
 driver:
   name: vagrant
-  provider:
-    name: virtualbox
 platforms:
   - name: instance
     box: ubuntu/xenial64
 provisioner:
   name: ansible
+  init: ansible-init
 verifier:
   name: testinfra

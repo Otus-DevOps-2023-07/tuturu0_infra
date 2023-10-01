@@ -1,10 +1,11 @@
 ---
-- name: update apt cache and install dependencies
+- name: Install Ruby
   apt:
-    update_cache: true
-    pkg:
-      - git
-      - ruby-full
-      - ruby-bundler
-      - build-essential
+   name: "{{item}}"
+   state: present
+   update_cache: yes
+  loop:
+        - ruby-full
+        - ruby-bundler
+        - build-essential
   tags: ruby

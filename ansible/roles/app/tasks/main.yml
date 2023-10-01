@@ -1,8 +1,7 @@
 ---
-# tasks file for app
-- name: Show info about current environment
+- name: Show host environment info
   debug:
-    msg: "This host is in the {{ env }} environment."
+   msg: "This host is ins {{ env }} environment"
 
-- include: ruby.yml
-- include: puma.yml
+- include_tasks: ruby.yml
+- include_tasks: puma.yml
