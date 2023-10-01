@@ -1,4 +1,3 @@
----
-db_host: "{{ db_host_addr }}"
+# defaults file for app
+db_host: 127.0.0.1
 env: local
-deploy_user: ubuntu
